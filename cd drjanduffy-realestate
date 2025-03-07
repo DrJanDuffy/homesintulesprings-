@@ -1,0 +1,32 @@
+3. Open the project in your preferred code editor
+
+4. To view the website locally, simply open the index.html file in your browser
+
+## Deployment
+
+This website can be deployed to any standard web hosting service:
+
+1. Upload all files to your web hosting server
+2. Ensure all paths are correct for your server environment
+3. Set up any necessary email handlers for the contact forms
+
+## Customization
+
+To customize the website:
+
+- Replace placeholder images in the /images directory with actual property photos
+- Update property listings in the HTML files
+- Modify contact information and map coordinates
+- Adjust colors in the CSS to match specific branding requirements
+
+## Contact Information
+
+For website inquiries or property information:
+
+Dr. Jan Duffy
+Email: DrDuffy@bhhsnv.com
+Office: 2627 Nature Park Dr, North Las Vegas, NV 89084
+
+## License
+
+All rights reserved. This website is for the exclusive use of Dr. Jan Duffy and Berkshire Hathaway HomeService Nevada Properties.
