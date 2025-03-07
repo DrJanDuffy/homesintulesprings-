@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.drjanduffy.com/sitemap.xml
+
+# Prevent indexing of administrative or duplicate content
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /temp/
+Disallow: /cgi-bin/
