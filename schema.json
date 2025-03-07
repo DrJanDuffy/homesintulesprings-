@@ -1,0 +1,257 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://www.drjanduffy.com/#realestateagent",
+      "name": "Dr. Jan Duffy",
+      "image": "https://www.drjanduffy.com/images/dr-jan-duffy.jpg",
+      "logo": "https://www.drjanduffy.com/images/logo.png",
+      "url": "https://www.drjanduffy.com",
+      "telephone": "+1-123-456-7890",
+      "email": "DrDuffy@bhhsnv.com",
+      "description": "Dr. Jan Duffy is a real estate specialist in Tule Springs, North Las Vegas, Nevada with Berkshire Hathaway HomeService Nevada Properties.",
+      "areaServed": {
+        "@type": "City",
+        "name": "North Las Vegas",
+        "containsPlace": "Tule Springs"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2627 Nature Park Dr",
+        "addressLocality": "North Las Vegas",
+        "addressRegion": "NV",
+        "postalCode": "89084",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3031,
+        "longitude": -115.2794
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "15:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/DrJanDuffy",
+        "https://www.instagram.com/drjanduffy",
+        "https://www.linkedin.com/in/drjanduffy"
+      ],
+      "member": {
+        "@type": "Organization",
+        "name": "Berkshire Hathaway HomeService Nevada Properties",
+        "url": "https://www.bhhsnv.com"
+      },
+      "priceRange": "$$-$$$",
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Real Estate Services in Tule Springs",
+          "description": "Comprehensive real estate services for buying and selling homes in the Tule Springs area of North Las Vegas."
+        }
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.drjanduffy.com/#website",
+      "url": "https://www.drjanduffy.com",
+      "name": "Dr. Jan Duffy | Tule Springs Real Estate Expert",
+      "description": "Find your dream home in Tule Springs, North Las Vegas with Dr. Jan Duffy of Berkshire Hathaway HomeService Nevada Properties.",
+      "publisher": {
+        "@id": "https://www.drjanduffy.com/#realestateagent"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.drjanduffy.com/listings?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bhhsnv.com/#organization",
+      "name": "Berkshire Hathaway HomeService Nevada Properties",
+      "url": "https://www.bhhsnv.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.drjanduffy.com/images/bhhs-logo.png",
+        "width": 300,
+        "height": 100
+      }
+    },
+    {
+      "@type": "Place",
+      "@id": "https://www.drjanduffy.com/tule-springs/#place",
+      "name": "Tule Springs",
+      "description": "Tule Springs is a premier master-planned community in North Las Vegas featuring multiple villages, parks, and amenities.",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3031,
+        "longitude": -115.2794
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "North Las Vegas",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Nevada"
+        }
+      }
+    },
+    {
+      "@type": "RealEstateListing",
+      "@id": "https://www.drjanduffy.com/listings/123-nature-view-dr/#listing",
+      "name": "Beautiful Family Home in Northwest Village",
+      "description": "Stunning 4 bedroom, 3 bathroom home in the desirable Northwest Village of Tule Springs.",
+      "url": "https://www.drjanduffy.com/listings/123-nature-view-dr",
+      "image": "https://www.drjanduffy.com/images/listing-1.jpg",
+      "offers": {
+        "@type": "Offer",
+        "price": 450000,
+        "priceCurrency": "USD"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Nature View Dr",
+        "addressLocality": "North Las Vegas",
+        "addressRegion": "NV",
+        "postalCode": "89084",
+        "addressCountry": "US"
+      },
+      "numberOfRooms": 4,
+      "numberOfBathroomsTotal": 3,
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": 2240,
+        "unitCode": "SQFT"
+      },
+      "broker": {
+        "@id": "https://www.drjanduffy.com/#realestateagent"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.drjanduffy.com/tule-springs/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the different villages in Tule Springs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tule Springs features four main villages: Northwest Village 1, Northeast Village 2, South Village 3, and Southeast Village 4. Each village has its own unique characteristics and home styles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What amenities are available in Tule Springs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tule Springs offers numerous amenities including parks, walking trails, natural preserves, planned school sites, community centers, and easy access to shopping and dining."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price range for homes in Tule Springs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Home prices in Tule Springs typically range from the high $300,000s to $600,000+ depending on the village, home size, and features."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far is Tule Springs from the Las Vegas Strip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tule Springs is approximately 15-20 minutes from the Las Vegas Strip, offering a peaceful suburban lifestyle with convenient access to all that Las Vegas has to offer."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.drjanduffy.com/tule-springs/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.drjanduffy.com/",
+            "name": "Home"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.drjanduffy.com/tule-springs/",
+            "name": "Tule Springs"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.drjanduffy.com/#localbusiness",
+      "name": "Dr. Jan Duffy - Berkshire Hathaway HomeService Nevada Properties",
+      "image": "https://www.drjanduffy.com/images/office.jpg",
+      "telephone": "+1-123-456-7890",
+      "email": "DrDuffy@bhhsnv.com",
+      "url": "https://www.drjanduffy.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2627 Nature Park Dr",
+        "addressLocality": "North Las Vegas",
+        "addressRegion": "NV",
+        "postalCode": "89084",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3031,
+        "longitude": -115.2794
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "15:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "North Las Vegas",
+        "containsPlace": "Tule Springs"
+      }
+    }
+  ]
+}
