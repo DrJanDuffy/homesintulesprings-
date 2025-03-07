@@ -1,0 +1,37 @@
+<!-- Global SEO meta tags to add to the <head> section of all pages -->
+
+<!-- Basic Meta Tags -->
+<meta name="description" content="Dr. Jan Duffy, your Tule Springs real estate specialist in North Las Vegas, Nevada. Find your dream home with Berkshire Hathaway HomeService Nevada Properties.">
+<meta name="keywords" content="Tule Springs, North Las Vegas real estate, Dr. Jan Duffy, Berkshire Hathaway, BHHS Nevada, homes for sale, Tule Springs villages, luxury homes">
+<meta name="author" content="Dr. Jan Duffy">
+
+<!-- Open Graph Meta Tags (for social sharing) -->
+<meta property="og:title" content="Dr. Jan Duffy | Tule Springs Real Estate Specialist">
+<meta property="og:description" content="Find your dream home in Tule Springs, North Las Vegas with real estate expert Dr. Jan Duffy of Berkshire Hathaway HomeService Nevada Properties.">
+<meta property="og:image" content="https://www.drjanduffy.com/images/social-share-image.jpg">
+<meta property="og:url" content="https://www.drjanduffy.com">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dr. Jan Duffy Real Estate">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dr. Jan Duffy | Tule Springs Real Estate Specialist">
+<meta name="twitter:description" content="Find your dream home in Tule Springs, North Las Vegas with real estate expert Dr. Jan Duffy of Berkshire Hathaway HomeService Nevada Properties.">
+<meta name="twitter:image" content="https://www.drjanduffy.com/images/social-share-image.jpg">
+
+<!-- Geo Meta Tags -->
+<meta name="geo.region" content="US-NV">
+<meta name="geo.placename" content="North Las Vegas">
+<meta name="geo.position" content="36.3031;-115.2794">
+<meta name="ICBM" content="36.3031, -115.2794">
+
+<!-- Canonical URL (prevent duplicate content issues) -->
+<link rel="canonical" href="https://www.drjanduffy.com/current-page.html">
+
+<!-- Favicon and Apple Touch Icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#00205b">
+<meta name="theme-color" content="#00205b">
