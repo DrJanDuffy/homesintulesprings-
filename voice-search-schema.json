@@ -1,0 +1,217 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://www.drjanduffy.com/#realestateagent",
+      "name": "Dr. Jan Duffy",
+      "image": "https://www.drjanduffy.com/images/dr-jan-duffy.jpg",
+      "logo": "https://www.drjanduffy.com/images/logo.png",
+      "url": "https://www.drjanduffy.com",
+      "telephone": "+1-123-456-7890",
+      "email": "DrDuffy@bhhsnv.com",
+      "description": "Dr. Jan Duffy is a real estate specialist in Tule Springs, North Las Vegas, Nevada with Berkshire Hathaway HomeService Nevada Properties.",
+      "areaServed": {
+        "@type": "City",
+        "name": "North Las Vegas",
+        "containsPlace": "Tule Springs"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2627 Nature Park Dr",
+        "addressLocality": "North Las Vegas",
+        "addressRegion": "NV",
+        "postalCode": "89084",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3031,
+        "longitude": -115.2794
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "15:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/DrJanDuffy",
+        "https://www.instagram.com/drjanduffy",
+        "https://www.linkedin.com/in/drjanduffy"
+      ],
+      "knowsAbout": [
+        "Tule Springs real estate",
+        "North Las Vegas homes",
+        "Nevada property market",
+        "Las Vegas suburban communities"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Real Estate Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Home Buying Services",
+              "description": "Professional assistance for finding and purchasing homes in Tule Springs and North Las Vegas."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Home Selling Services",
+              "description": "Expert marketing and sales services for homeowners in Tule Springs and surrounding areas."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.drjanduffy.com/tule-springs/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is Tule Springs located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tule Springs is located in the northern part of North Las Vegas, Nevada. It's approximately 15-20 minutes from the Las Vegas Strip and offers easy access to major highways including the Bruce Woodbury Beltway."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do homes in Tule Springs cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Homes in Tule Springs typically range from the high $300,000s to $600,000+ depending on the village, size, and features. Northwest Village homes tend to have larger lot sizes and may be priced slightly higher than other villages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the different villages in Tule Springs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tule Springs features four main villages: Northwest Village 1, Northeast Village 2, South Village 3, and Southeast Village 4. Each village has its own unique characteristics, with Northwest Village featuring homes with larger lots adjacent to natural preserves, Northeast Village offering family-friendly amenities, South Village providing a mix of housing options including active adult communities, and Southeast Village featuring the newest construction with contemporary designs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What schools are near Tule Springs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tule Springs is served by the Clark County School District and has several planned school sites within the community. Currently, nearby schools include Eva Wolfe Elementary School, Clifford J. Lawrence Junior High School, and Shadow Ridge High School. The community's master plan includes sites for future schools as the population grows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What amenities are available in Tule Springs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tule Springs offers numerous amenities including Tule Springs Regional Park, walking and biking trails, natural preserves, community parks, and planned retail and commercial areas. The community features desert-adapted landscaping throughout, creating a beautiful environment that celebrates the natural surroundings. Residents also enjoy easy access to shopping, dining, and entertainment options in nearby areas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Dr. Jan Duffy about buying or selling a home in Tule Springs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can reach Dr. Jan Duffy by phone at (123) 456-7890, by email at DrDuffy@bhhsnv.com, or by visiting her office located at 2627 Nature Park Dr, North Las Vegas, NV 89084. Office hours are Monday through Friday from 9 AM to 5 PM, and Saturday from 10 AM to 3 PM."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.drjanduffy.com/tule-springs/#webpage",
+      "url": "https://www.drjanduffy.com/tule-springs/",
+      "name": "Tule Springs Community Guide | North Las Vegas | Dr. Jan Duffy",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".tule-springs-intro",
+          ".villages-section h2",
+          ".villages-section h3",
+          ".village-content p:first-of-type",
+          ".amenities-section h2"
+        ]
+      },
+      "isPartOf": {
+        "@id": "https://www.drjanduffy.com/#website"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.drjanduffy.com/listings/#webpage",
+      "url": "https://www.drjanduffy.com/listings/",
+      "name": "Tule Springs Homes for Sale | North Las Vegas Real Estate | Dr. Jan Duffy",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".page-intro",
+          ".listings-intro",
+          ".featured-listing h3",
+          ".featured-listing .listing-price",
+          ".featured-listing .listing-address"
+        ]
+      },
+      "isPartOf": {
+        "@id": "https://www.drjanduffy.com/#website"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.drjanduffy.com/buyers/#howto",
+      "name": "How to Buy a Home in Tule Springs",
+      "description": "A step-by-step guide for buying your perfect home in Tule Springs, North Las Vegas with Dr. Jan Duffy.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Get pre-approved for a mortgage",
+          "text": "Before starting your home search, speak with a lender to determine your budget and get pre-approved for a mortgage. This will strengthen your offer when you find the right home."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Identify your preferred village in Tule Springs",
+          "text": "Explore the different villages in Tule Springs to find the one that best matches your lifestyle and preferences. Each village offers unique features and home styles."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Tour available homes with Dr. Duffy",
+          "text": "Dr. Jan Duffy will arrange showings of homes that match your criteria, providing expert insights about each property and the surrounding community."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Make an offer and negotiate",
+          "text": "When you find your perfect home, Dr. Duffy will help you prepare a competitive offer and negotiate on your behalf to secure the best terms."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Complete inspections and appraisal",
+          "text": "Once your offer is accepted, Dr. Duffy will guide you through the inspection process, appraisal, and any necessary negotiations for repairs."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Close on your new Tule Springs home",
+          "text": "Dr. Duffy will coordinate with all parties to ensure a smooth closing process, resulting in you receiving the keys to your new Tule Springs home."
+        }
+      ]
+    }
+  ]
+}
