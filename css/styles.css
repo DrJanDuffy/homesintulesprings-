@@ -1,0 +1,827 @@
+/* Main Stylesheet for Dr. Jan Duffy's Real Estate Website */
+
+/* 
+ * Color Scheme:
+ * Primary: #00205b (Berkshire Hathaway Navy Blue)
+ * Secondary: #d3b054 (Gold accent)
+ * Light: #f7f7f7 (Light gray)
+ * Dark: #333333 (Dark text)
+ * Accent 1: #7b9e89 (Desert sage)
+ * Accent 2: #c8ad8d (Desert sand)
+ */
+
+/* Global Styles */
+:root {
+    --primary: #00205b;
+    --secondary: #d3b054;
+    --light: #f7f7f7;
+    --dark: #333333;
+    --accent1: #7b9e89;
+    --accent2: #c8ad8d;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #001640;
+    border-color: #001640;
+}
+
+.btn-outline-primary {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.section-title h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary);
+}
+
+/* Header Styles */
+.header {
+    padding: 15px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    max-height: 70px;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.navigation ul li a {
+    color: var(--dark);
+    font-weight: 600;
+    padding: 10px 0;
+    display: block;
+}
+
+.navigation ul li a:hover {
+    color: var(--primary);
+}
+
+.navigation .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 200px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.navigation ul li:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.navigation .sub-menu li {
+    margin: 0;
+    width: 100%;
+}
+
+.navigation .sub-menu li a {
+    padding: 8px 15px;
+}
+
+.header-contact {
+    text-align: right;
+}
+
+.header-contact a {
+    display: inline-block;
+    margin-left: 20px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.header-contact a i {
+    margin-right: 5px;
+}
+
+/* Hero Banner */
+.hero-banner {
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-slide:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+    position: relative;
+    color: #fff;
+    max-width: 600px;
+    padding: 150px 0;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+/* Quick Search */
+.quick-search {
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 70px;
+}
+
+.search-container {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.search-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.search-form select, 
+.search-form input {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+/* Featured Listings */
+.featured-listings {
+    padding: 70px 0;
+    background-color: var(--light);
+}
+
+.listing-card {
+    background-color: #fff;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.listing-img {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.listing-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.listing-card:hover .listing-img img {
+    transform: scale(1.1);
+}
+
+.listing-price {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 8px 15px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.listing-info {
+    padding: 20px;
+}
+
+.listing-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.listing-address {
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.listing-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.listing-details span i {
+    color: var(--secondary);
+    margin-right: 5px;
+}
+
+/* About Area */
+.about-area {
+    padding: 70px 0;
+}
+
+.about-content h2 {
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+.about-image img {
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Meet Agent */
+.meet-agent {
+    padding: 70px 0;
+    background-color: var(--light);
+}
+
+.agent-image img {
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.agent-content h2 {
+    margin-bottom: 10px;
+}
+
+.agent-content h4 {
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.agent-content p {
+    margin-bottom: 15px;
+}
+
+.agent-contact {
+    margin-bottom: 20px;
+}
+
+.agent-contact a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.agent-contact a i {
+    margin-right: 10px;
+    color: var(--secondary);
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 70px 0;
+    background-color: #fff;
+}
+
+.testimonial-item {
+    padding: 15px;
+}
+
+.testimonial-content {
+    background-color: var(--light);
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+.testimonial-content:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--light);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.client-info {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.client-info h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.client-info p {
+    margin-bottom: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 70px 0;
+    background-color: var(--light);
+}
+
+.contact-container {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contact-details li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.contact-details li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: var(--primary);
+}
+
+.contact-form .form-control {
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 0;
+    border: 1px solid #ddd;
+}
+
+.contact-form textarea.form-control {
+    height: auto;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 70px 0 0;
+}
+
+.footer-logo img {
+    max-height: 60px;
+    margin-bottom: 20px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.footer-contact p i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.footer h3 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--secondary);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links li a {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: var(--secondary);
+    padding-left: 5px;
+}
+
+.social-links {
+    margin-bottom: 25px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.footer-newsletter h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.footer-newsletter .form-control {
+    height: 46px;
+    background-color: rgba(255,255,255,0.1);
+    border: none;
+    color: #fff;
+}
+
+.footer-newsletter .form-control::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-legal {
+    text-align: right;
+}
+
+.footer-legal p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.realtor-logos {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.realtor-logos span {
+    margin-left: 15px;
+}
+
+.realtor-logos img {
+    height: 30px;
+}
+
+/* Property Detail Page */
+.property-header {
+    padding: 50px 0;
+    background-color: var(--light);
+}
+
+.property-title h1 {
+    margin-bottom: 10px;
+}
+
+.property-address {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.property-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.property-meta {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.property-meta-item {
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.property-meta-item span {
+    display: block;
+}
+
+.property-meta-item .meta-title {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.property-meta-item .meta-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.property-actions {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.property-actions .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.property-slider {
+    margin-bottom: 50px;
+}
+
+.property-slider-main {
+    margin-bottom: 10px;
+}
+
+.property-slider-main .slide {
+    height: 500px;
+}
+
+.property-slider-main .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-slider-nav .slide {
+    height: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.property-slider-nav .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.property-slider-nav .slick-current .slide img {
+    opacity: 1;
+}
+
+.property-content {
+    padding: 50px 0;
+}
+
+.property-description {
+    margin-bottom: 40px;
+}
+
+.property-features {
+    margin-bottom: 40px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature-list li {
+    width: 33.333%;
+    padding: 5px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.feature-list li:before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: var(--secondary);
+}
+
+.property-map {
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+.property-contact {
+    background-color: var(--light);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.property-contact h3 {
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .desktop-only {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .property-slider-main .slide {
+        height: 400px;
+    }
+    
+    .feature-list li {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-banner,
+    .hero-slide {
+        height: 400px;
+    }
+    
+    .hero-content {
+        padding: 100px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .property-meta-item {
+        width: 50%;
+        margin-right: 0;
+    }
+    
+    .property-slider-main .slide {
+        height: 300px;
+    }
+    
+    .feature-list li {
+        width: 100%;
+    }
+    
+    .footer-legal {
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    .realtor-logos {
+        justify-content: flex-start;
+    }
+    
+    .realtor-logos span {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
