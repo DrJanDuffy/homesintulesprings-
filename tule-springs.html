@@ -91,13 +91,14 @@
         </section>
 
         <!-- RealScout Property Search Widget -->
-        <section class="realscout-search">
+        <section class="buyer-section">
             <div class="container">
-                <div class="section-title">
-                    <h2>Browse Tule Springs Homes For Sale</h2>
+                <div class="section-header">
+                    <span class="section-badge">For Sale Now</span>
+                    <h2>Tule Springs Homes For Sale</h2>
                     <p>Live MLS listings updated in real-time</p>
                 </div>
-                <div class="realscout-widget-container">
+                <div class="realscout-widget-container realscout-main">
                     <realscout-office-listings 
                         agent-encoded-id="QWdlbnQtMjI1MDUw"
                         sort-order="NEWEST"
@@ -106,6 +107,74 @@
                         price-min="300000"
                         price-max="800000">
                     </realscout-office-listings>
+                </div>
+                
+                <!-- Quick Actions for Buyers -->
+                <div class="benefits-row">
+                    <div class="benefit-item">
+                        <i class="fas fa-heart"></i>
+                        <h4>Save Favorites</h4>
+                        <p>Create an account to save homes you love</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-bell"></i>
+                        <h4>Get Alerts</h4>
+                        <p>Be first to know about new listings</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-calendar"></i>
+                        <h4>Schedule Tours</h4>
+                        <p>Book showings directly online</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-phone"></i>
+                        <h4>Call Dr. Duffy</h4>
+                        <p><a href="tel:+17025001942">(702) 500-1942</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seller Section -->
+        <section class="seller-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge seller-badge">For Sellers</span>
+                    <h2>Selling in Tule Springs?</h2>
+                    <p>See recently sold homes and get your home's value</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="valuation-card">
+                            <div class="valuation-header">
+                                <i class="fas fa-chart-line"></i>
+                                <h3>What's Your Home Worth?</h3>
+                            </div>
+                            <p>Get a free market analysis of your Tule Springs home.</p>
+                            <div class="realscout-widget-container">
+                                <realscout-home-value
+                                    agent-encoded-id="QWdlbnQtMjI1MDUw">
+                                </realscout-home-value>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="sold-card">
+                            <div class="sold-header">
+                                <i class="fas fa-tag"></i>
+                                <h3>Recently Sold</h3>
+                            </div>
+                            <p>See what homes are selling for in Tule Springs</p>
+                            <div class="realscout-widget-container">
+                                <realscout-office-listings 
+                                    agent-encoded-id="QWdlbnQtMjI1MDUw"
+                                    sort-order="NEWEST"
+                                    listing-status="Sold"
+                                    property-types="SFR,MF,TC,OTHER">
+                                </realscout-office-listings>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
