@@ -100,6 +100,13 @@ a:focus-visible {
     margin-right: auto;
     padding-left: 24px;
     padding-right: 24px;
+    box-sizing: border-box;
+}
+/* Ensure container is always centered */
+body .container,
+#main-wrapper .container {
+    margin-left: auto;
+    margin-right: auto;
 }
 @media (min-width: 768px) {
     .container {
@@ -206,6 +213,17 @@ a:focus-visible {
 
 .header .row {
     min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
+}
+
+.header .row .header-left,
+.header .row .col-md-9 {
+    flex: 0 0 auto;
+    max-width: none;
 }
 
 /* Logo section: logo + phone */
@@ -217,7 +235,7 @@ a:focus-visible {
 }
 
 .logo img {
-    max-height: 56px;
+    max-height: 64px;
     width: auto;
     display: block;
 }
@@ -232,7 +250,7 @@ a:focus-visible {
     gap: 6px;
     color: var(--primary);
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     white-space: nowrap;
     padding: 8px 14px;
     border-radius: var(--radius-md);
@@ -248,20 +266,20 @@ a:focus-visible {
 }
 
 .header-phone .phone-link i {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
 }
 
 /* Navigation: enhanced */
 .header .col-md-9 {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .navigation {
-    width: 100%;
+    width: auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .navigation ul {
@@ -282,7 +300,7 @@ a:focus-visible {
 .navigation ul li > a {
     color: var(--dark);
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1.12rem;
     padding: 10px 14px;
     display: block;
     border-radius: var(--radius-md);
@@ -330,7 +348,7 @@ a:focus-visible {
 
 .navigation .sub-menu li a {
     padding: 10px 18px;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 500;
     border-radius: 0;
 }
@@ -348,6 +366,13 @@ a:focus-visible {
 .hero-banner {
     position: relative;
     overflow: hidden;
+}
+
+.hero-banner .container,
+.hero-slide .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .hero-slide {
@@ -371,8 +396,14 @@ a:focus-visible {
     position: relative;
     color: #fff;
     max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 150px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-content.text-center {
@@ -396,10 +427,12 @@ a:focus-visible {
     opacity: 0.95;
 }
 
-.hero-subtitle {
+.hero-content .hero-subtitle {
     font-size: 1.4rem;
     max-width: 640px;
-    margin: 0 auto 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
 }
 
 .hero-buttons {
@@ -2056,11 +2089,20 @@ a:focus-visible {
     background: linear-gradient(135deg, rgba(0,32,91,0.85) 0%, rgba(0,32,91,0.6) 100%);
 }
 
+.page-banner .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .banner-content {
     position: relative;
     color: #fff;
     text-align: center;
     width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .banner-content h1 {
