@@ -15,26 +15,97 @@
     
     <title>Tule Springs Community Guide | Dr. Jan Duffy, REALTOR® | Berkshire Hathaway HomeServices</title>
     <meta name="description" content="Explore the beautiful Tule Springs community in North Las Vegas. Your comprehensive guide to villages, amenities, and living in this premier master-planned development." />
+    <link rel="canonical" href="https://www.homesintulesprings.com/tule-springs.html" />
+    
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- RealScout Widget -->
+    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" defer></script>
 </head>
 <body>
     <div id="main-wrapper">
         <!-- Header (Same as index.html) -->
         
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="images/logo.png" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <nav class="navigation desktop-only">
+                            <ul id="main-nav" class="menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="menu-item-has-children active">
+                                    <a href="tule-springs.html">Tule Springs</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="tule-springs-villages.html">Villages</a></li>
+                                        <li><a href="tule-springs-amenities.html">Amenities</a></li>
+                                        <li><a href="tule-springs-schools.html">Schools</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="listings.html">Listings</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="featured-listings.html">Featured Listings</a></li>
+                                        <li><a href="sold-properties.html">Sold Properties</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="buyers.html">Buyers</a></li>
+                                <li><a href="sellers.html">Sellers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header-contact">
+                            <a href="tel:+17025001942" class="phone"><i class="fas fa-phone"></i> (702) 500-1942</a>
+                            <a href="mailto:DrDuffy@bhhsnv.com" class="email"><i class="fas fa-envelope"></i> DrDuffy@bhhsnv.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         <!-- Page Banner -->
         <section class="page-banner" style="background-image: url('images/tule-springs-park.jpg')">
             <div class="container">
                 <div class="banner-content">
                     <h1>Tule Springs</h1>
+                    <p class="banner-subtitle">North Las Vegas' Premier Master-Planned Community</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Tule Springs</li>
                         </ol>
                     </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- RealScout Property Search Widget -->
+        <section class="realscout-search">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Browse Tule Springs Homes For Sale</h2>
+                    <p>Live MLS listings updated in real-time</p>
+                </div>
+                <div class="realscout-widget-container">
+                    <realscout-office-listings 
+                        agent-encoded-id="QWdlbnQtMjI1MDUw"
+                        sort-order="NEWEST"
+                        listing-status="For Sale"
+                        property-types="SFR,MF,TC,OTHER"
+                        price-min="300000"
+                        price-max="800000">
+                    </realscout-office-listings>
                 </div>
             </div>
         </section>
@@ -279,18 +350,92 @@
         <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
-                <div class="cta-container text-center">
+                <div class="cta-content text-center">
                     <h2>Ready to Find Your Home in Tule Springs?</h2>
                     <p>Let Dr. Jan Duffy guide you through this exceptional community and help you find the perfect home.</p>
                     <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary">Contact Dr. Duffy</a>
-                        <a href="listings.html" class="btn btn-outline-primary">View Tule Springs Listings</a>
+                        <a href="tel:+17025001942" class="btn btn-primary btn-lg"><i class="fas fa-phone"></i> Call (702) 500-1942</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">Send a Message</a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Footer (Same as index.html) -->
+        <!-- Floating Action Buttons -->
+        <div class="floating-actions">
+            <a href="tel:+17025001942" class="fab-btn fab-phone pulse-animation" aria-label="Call Dr. Duffy">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="contact.html" class="fab-btn fab-chat" aria-label="Contact Dr. Duffy">
+                <i class="fas fa-comment"></i>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-logo">
+                            <img src="images/logo-white.png" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
+                        </div>
+                        <div class="footer-contact">
+                            <p><i class="fas fa-map-marker-alt"></i> 2627 Nature Park Dr, North Las Vegas, NV 89084</p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:+17025001942">(702) 500-1942</a></p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:DrDuffy@bhhsnv.com">DrDuffy@bhhsnv.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="tule-springs.html">Tule Springs</a></li>
+                            <li><a href="listings.html">Listings</a></li>
+                            <li><a href="buyers.html">Buyers</a></li>
+                            <li><a href="sellers.html">Sellers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Follow Dr. Duffy</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/DrJanDuffy" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/drjanduffy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/drjanduffy" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.youtube.com/@drjanduffy" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="footer-newsletter">
+                            <h4>Subscribe to Our Newsletter</h4>
+                            <form>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; 2026 Dr. Jan Duffy. All Rights Reserved.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-legal">
+                                <p>Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada Properties</p>
+                                <div class="realtor-logos">
+                                    <span class="equal-housing"><img src="images/equal-housing.png" alt="Equal Housing Opportunity"></span>
+                                    <span class="realtor-logo"><img src="images/realtor-logo.png" alt="Realtor"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="js/jquery.min.js"></script>

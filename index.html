@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
     
+    <!-- RealScout Widget -->
+    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" defer></script>
+    
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
@@ -140,6 +143,26 @@
                             <span class="stat-label">Average Rating</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RealScout Property Search Widget -->
+        <section class="realscout-search">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Search Tule Springs Homes</h2>
+                    <p>Browse available properties with real-time MLS data</p>
+                </div>
+                <div class="realscout-widget-container">
+                    <realscout-office-listings 
+                        agent-encoded-id="QWdlbnQtMjI1MDUw"
+                        sort-order="NEWEST"
+                        listing-status="For Sale"
+                        property-types="SFR,MF,TC,OTHER"
+                        price-min="300000"
+                        price-max="800000">
+                    </realscout-office-listings>
                 </div>
             </div>
         </section>
@@ -618,6 +641,48 @@
             </div>
         </section>
 
+        <!-- Interactive Tools Section -->
+        <section class="tools-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Free Real Estate Tools</h2>
+                    <p>Helpful resources to guide your home buying or selling journey</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>Home Value Estimator</h3>
+                            <p>Get an instant estimate of your home's current market value based on recent sales.</p>
+                            <a href="contact.html?type=valuation" class="btn btn-outline-primary">Get Free Estimate</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h3>Mortgage Calculator</h3>
+                            <p>Calculate your monthly payment and see what you can afford in Tule Springs.</p>
+                            <a href="#mortgage-calc" class="btn btn-outline-primary" data-toggle="modal">Calculate Payment</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h3>New Listing Alerts</h3>
+                            <p>Be the first to know when new homes hit the market in your desired area.</p>
+                            <a href="contact.html?type=alerts" class="btn btn-outline-primary">Set Up Alerts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
@@ -691,6 +756,16 @@
                 </div>
             </div>
         </section>
+
+        <!-- Floating Action Buttons -->
+        <div class="floating-actions">
+            <a href="tel:+17025001942" class="fab-btn fab-phone pulse-animation" aria-label="Call Dr. Duffy">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="contact.html" class="fab-btn fab-chat" aria-label="Contact Dr. Duffy">
+                <i class="fas fa-comment"></i>
+            </a>
+        </div>
 
         <!-- Footer -->
         <footer class="footer">
