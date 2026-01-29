@@ -61,6 +61,11 @@ a:hover {
 
 .container {
     max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .btn {
@@ -251,8 +256,13 @@ a:hover {
 .hero-content {
     position: relative;
     color: #fff;
-    max-width: 700px;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 150px 0 100px;
+}
+
+.hero-content.text-center {
+    text-align: center;
 }
 
 .hero-content h1 {
@@ -270,6 +280,12 @@ a:hover {
     font-size: 1.25rem;
     margin-bottom: 30px;
     opacity: 0.95;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
 }
 
 .hero-buttons {
@@ -1620,6 +1636,15 @@ a:hover {
 .buyer-section {
     padding: 80px 0;
     background: #fff;
+}
+
+.buyer-section .container,
+.seller-section .container,
+.market-snapshot .container,
+.agent-brief .container,
+.cta-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Benefits Row */
