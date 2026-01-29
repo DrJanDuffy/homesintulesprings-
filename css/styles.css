@@ -2207,3 +2207,60 @@ a:hover {
     color: var(--primary);
     font-weight: 700;
 }
+
+/* Process Steps */
+.process-section {
+    padding: 80px 0;
+    background: var(--light);
+}
+
+.process-step {
+    text-align: center;
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.process-step h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Village Price */
+.village-price {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.village-price strong {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+/* Village Image */
+img.village-image {
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
