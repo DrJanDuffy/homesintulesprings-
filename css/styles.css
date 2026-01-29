@@ -22,7 +22,7 @@
     --text-muted: #666;
     --border: #ddd;
     /* Layout */
-    --container-max: 1200px;
+    --container-max: 1440px;
     --section-padding: 80px;
     --section-padding-sm: 60px;
     /* Spacing scale (4px base) */
@@ -52,11 +52,16 @@
     box-sizing: border-box;
 }
 
+#main-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: var(--dark);
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 18px;
     background-color: var(--white);
     margin: 0;
     padding: 0;
@@ -93,8 +98,14 @@ a:focus-visible {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+@media (min-width: 768px) {
+    .container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 }
 
 .btn {
@@ -104,7 +115,7 @@ a:focus-visible {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color var(--ease), border-color var(--ease), color var(--ease), transform var(--ease), box-shadow var(--ease);
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .btn:focus-visible {
@@ -221,7 +232,7 @@ a:focus-visible {
     gap: 6px;
     color: var(--primary);
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     white-space: nowrap;
     padding: 8px 14px;
     border-radius: var(--radius-md);
@@ -271,7 +282,7 @@ a:focus-visible {
 .navigation ul li > a {
     color: var(--dark);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     padding: 10px 14px;
     display: block;
     border-radius: var(--radius-md);
@@ -319,7 +330,7 @@ a:focus-visible {
 
 .navigation .sub-menu li a {
     padding: 10px 18px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     border-radius: 0;
 }
@@ -380,14 +391,14 @@ a:focus-visible {
 }
 
 .hero-content p {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     margin-bottom: 30px;
     opacity: 0.95;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
-    max-width: 600px;
+    font-size: 1.4rem;
+    max-width: 640px;
     margin: 0 auto 30px;
 }
 
@@ -433,7 +444,7 @@ a:focus-visible {
 
 .stat-label {
     display: block;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #666;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1128,6 +1139,7 @@ a:focus-visible {
     margin-bottom: 10px;
     padding-left: 30px;
     position: relative;
+    font-size: 1.05rem;
 }
 
 .footer-contact p i {
@@ -1147,7 +1159,7 @@ a:focus-visible {
 .footer h3 {
     color: #fff;
     margin-bottom: 25px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     position: relative;
     padding-bottom: 10px;
 }
@@ -1174,6 +1186,7 @@ a:focus-visible {
 
 .footer-links li a {
     color: #fff;
+    font-size: 1.05rem;
     transition: all 0.3s ease;
 }
 
@@ -1238,7 +1251,7 @@ a:focus-visible {
 
 .footer-legal p {
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .realtor-logos {
@@ -1715,7 +1728,7 @@ a:focus-visible {
     color: #fff;
     padding: 8px 20px;
     border-radius: 30px;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1728,12 +1741,12 @@ a:focus-visible {
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.75rem);
     margin-bottom: 10px;
 }
 
 .section-header p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--text-muted);
 }
 
@@ -1741,6 +1754,10 @@ a:focus-visible {
 .buyer-section {
     padding: 80px 0;
     background: #fff;
+}
+
+.mls-disclaimer {
+    font-size: 0.95rem !important;
 }
 
 /* Section containers inherit .container max-width */
@@ -1774,14 +1791,14 @@ a:focus-visible {
 }
 
 .benefit-item h4 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 8px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
 
 .benefit-item p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-muted);
     margin-bottom: 0;
 }
@@ -2048,12 +2065,12 @@ a:focus-visible {
 
 .banner-content h1 {
     color: var(--white);
-    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3.25rem);
     margin-bottom: 10px;
 }
 
 .banner-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     opacity: 0.9;
     margin-bottom: 20px;
 }
@@ -2063,6 +2080,7 @@ a:focus-visible {
     justify-content: center;
     padding: 0;
     margin: 0;
+    font-size: 1rem;
 }
 
 .banner-content .breadcrumb-item a {
