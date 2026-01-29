@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- RealScout Widget -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"LocalBusiness","name":"Dr. Jan Duffy - Berkshire Hathaway HomeServices","image":"https://www.homesintulesprings.com/images/logo.svg","telephone":"+1-702-500-1942","email":"DrDuffy@bhhsnv.com","address":{"@type":"PostalAddress","streetAddress":"2627 Nature Park Dr","addressLocality":"North Las Vegas","addressRegion":"NV","postalCode":"89084","addressCountry":"US"},"openingHours":["Mo-Fr 09:00-17:00","Sa 10:00-15:00"],"url":"https://www.homesintulesprings.com/tule-springs.html"}
+    </script>
     <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" defer></script>
 </head>
 <body>
@@ -33,42 +35,41 @@
         <header class="header">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-3">
+                    <div class="col-md-3 header-left">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="images/logo.png" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
+                                <img src="images/logo.svg" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
                             </a>
+                        </div>
+                        <div class="header-phone">
+                            <a href="tel:+17025001942" class="phone-link"><i class="fas fa-phone"></i> (702) 500-1942</a>
                         </div>
                     </div>
                     <div class="col-md-9">
                         <nav class="navigation desktop-only">
                             <ul id="main-nav" class="menu">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="buyers.html">Buy</a></li>
+                                <li><a href="listings">Listings</a></li>
+                                <li><a href="sellers.html">Sell</a></li>
                                 <li class="menu-item-has-children active">
                                     <a href="tule-springs.html">Tule Springs</a>
                                     <ul class="sub-menu">
+                                        <li><a href="tule-springs-homes-for-sale.html">Homes for Sale</a></li>
                                         <li><a href="tule-springs-villages.html">Villages</a></li>
-                                        <li><a href="tule-springs-amenities.html">Amenities</a></li>
                                         <li><a href="tule-springs-schools.html">Schools</a></li>
+                                        <li><a href="tule-springs-amenities.html">Amenities</a></li>
+                                        <li><a href="why-tule-springs.html">Why Live Here</a></li>
+                                        <li><a href="tule-springs-real-estate.html">Real Estate</a></li>
+                                        <li><a href="tule-springs-neighborhoods.html">Neighborhoods</a></li>
+                                        <li><a href="north-las-vegas-tule-springs.html">North Las Vegas</a></li>
+                                        <li><a href="tule-springs-new-homes.html">New Homes</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children">
-                                    <a href="listings.html">Listings</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="featured-listings.html">Featured Listings</a></li>
-                                        <li><a href="sold-properties.html">Sold Properties</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="buyers.html">Buyers</a></li>
-                                <li><a href="sellers.html">Sellers</a></li>
+                                <li><a href="about.html">About</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
-                        <div class="header-contact">
-                            <a href="tel:+17025001942" class="phone"><i class="fas fa-phone"></i> (702) 500-1942</a>
-                            <a href="mailto:DrDuffy@bhhsnv.com" class="email"><i class="fas fa-envelope"></i> DrDuffy@bhhsnv.com</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -98,6 +99,7 @@
                     <h2>Tule Springs Homes For Sale</h2>
                     <p>Live MLS listings updated in real-time</p>
                 </div>
+                <p class="mls-disclaimer text-muted small" style="margin-bottom: 1rem;"><strong>Listing disclaimer:</strong> All listing data is deemed reliable but not guaranteed. Listings displayed are from the MLS. &copy; 2026 the listing broker. All rights reserved.</p>
                 <div class="realscout-widget-container realscout-main">
                     <realscout-office-listings 
                         agent-encoded-id="QWdlbnQtMjI1MDUw"
@@ -192,7 +194,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="intro-image">
-                            <img src="images/tule-springs-map.jpg" alt="Tule Springs Community Map" class="img-fluid">
+                            <img src="images/tule-springs-map.jpg" alt="Tule Springs Community Map" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -204,7 +206,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Villages of Tule Springs</h2>
-                    <p>Explore the distinct neighborhoods that make up this premier community</p>
+                    <p>Explore the distinct <a href="tule-springs-villages.html">villages</a> that make up this premier community</p>
                 </div>
                 
                 <div class="village-container">
@@ -219,12 +221,12 @@
                                     <li>Parks and walking trails</li>
                                     <li>Quick access to Bruce Woodbury Beltway</li>
                                 </ul>
-                                <a href="listings.html?village=northwest" class="btn btn-primary">View Northwest Village Listings</a>
+                                <a href="buyers.html" class="btn btn-primary">View Northwest Village Listings</a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="village-image">
-                                <img src="images/northwest-village.jpg" alt="Northwest Village 1" class="img-fluid">
+                                <img src="images/northwest-village.jpg" alt="Northwest Village 1 Tule Springs" class="img-fluid" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -242,12 +244,12 @@
                                     <li>Community park and recreation areas</li>
                                     <li>Easy access to shopping and dining</li>
                                 </ul>
-                                <a href="listings.html?village=northeast" class="btn btn-primary">View Northeast Village Listings</a>
+                                <a href="buyers.html" class="btn btn-primary">View Northeast Village Listings</a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="village-image">
-                                <img src="images/northeast-village.jpg" alt="Northeast Village 2" class="img-fluid">
+                                <img src="images/northeast-village.jpg" alt="Northeast Village 2 Tule Springs" class="img-fluid" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -265,12 +267,12 @@
                                     <li>Community trails connecting to regional network</li>
                                     <li>Central location within Tule Springs</li>
                                 </ul>
-                                <a href="listings.html?village=south" class="btn btn-primary">View South Village Listings</a>
+                                <a href="buyers.html" class="btn btn-primary">View South Village Listings</a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="village-image">
-                                <img src="images/south-village.jpg" alt="South Village 3" class="img-fluid">
+                                <img src="images/south-village.jpg" alt="South Village 3 Tule Springs" class="img-fluid" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -288,12 +290,12 @@
                                     <li>Energy-efficient home designs</li>
                                     <li>Proximity to future school sites</li>
                                 </ul>
-                                <a href="listings.html?village=southeast" class="btn btn-primary">View Southeast Village Listings</a>
+                                <a href="buyers.html" class="btn btn-primary">View Southeast Village Listings</a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="village-image">
-                                <img src="images/southeast-village.jpg" alt="Southeast Village 4" class="img-fluid">
+                                <img src="images/southeast-village.jpg" alt="Southeast Village 4 Tule Springs" class="img-fluid" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -306,7 +308,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Community Amenities</h2>
-                    <p>Enjoy the exceptional features that make Tule Springs special</p>
+                    <p>Enjoy the exceptional <a href="tule-springs-amenities.html">parks, trails, and amenities</a> that make Tule Springs special</p>
                 </div>
                 
                 <div class="row">
@@ -326,7 +328,7 @@
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
                             <h3>Education</h3>
-                            <p>The community has planned sites for elementary, middle, and high schools, ensuring residents have convenient access to quality education for their children.</p>
+                            <p>The community has planned sites for elementary, middle, and high schools. Learn more about <a href="tule-springs-schools.html">schools serving Tule Springs</a> and boundaries.</p>
                         </div>
                     </div>
                     
@@ -382,7 +384,7 @@
                 </div>
                 
                 <div class="map-container">
-                    <img src="images/tule-springs-map.jpg" alt="Detailed Tule Springs Community Map" class="img-fluid">
+                    <img src="images/tule-springs-map.jpg" alt="Detailed Tule Springs Community Map" class="img-fluid" loading="lazy">
                 </div>
                 
                 <div class="map-legend">
@@ -446,7 +448,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="footer-logo">
-                            <img src="images/logo-white.png" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
+                            <img src="images/logo-white.svg" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
                         </div>
                         <div class="footer-contact">
                             <p><i class="fas fa-map-marker-alt"></i> 2627 Nature Park Dr, North Las Vegas, NV 89084</p>
@@ -458,16 +460,28 @@
                         <h3>Quick Links</h3>
                         <ul class="footer-links">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="buyers.html">Buy</a></li>
+                            <li><a href="listings">Listings</a></li>
+                            <li><a href="sellers.html">Sell</a></li>
                             <li><a href="tule-springs.html">Tule Springs</a></li>
-                            <li><a href="listings.html">Listings</a></li>
-                            <li><a href="buyers.html">Buyers</a></li>
-                            <li><a href="sellers.html">Sellers</a></li>
+                            <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4">
-                        <h3>Follow Dr. Duffy</h3>
+                        <h3>Explore Tule Springs</h3>
+                        <ul class="footer-links">
+                            <li><a href="tule-springs-homes-for-sale.html">Homes for Sale</a></li>
+                            <li><a href="tule-springs-real-estate.html">Real Estate</a></li>
+                            <li><a href="tule-springs-villages.html">Villages</a></li>
+                            <li><a href="tule-springs-schools.html">Schools</a></li>
+                            <li><a href="tule-springs-amenities.html">Amenities</a></li>
+                            <li><a href="tule-springs-neighborhoods.html">Neighborhoods</a></li>
+                            <li><a href="north-las-vegas-tule-springs.html">North Las Vegas</a></li>
+                            <li><a href="tule-springs-new-homes.html">New Homes</a></li>
+                            <li><a href="why-tule-springs.html">Why Live Here</a></li>
+                        </ul>
+                        <h3 class="mt-3">Follow Dr. Duffy</h3>
                         <div class="social-links">
                             <a href="https://www.facebook.com/DrJanDuffy" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/drjanduffy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -496,8 +510,8 @@
                             <div class="footer-legal">
                                 <p>Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada Properties</p>
                                 <div class="realtor-logos">
-                                    <span class="equal-housing"><img src="images/equal-housing.png" alt="Equal Housing Opportunity"></span>
-                                    <span class="realtor-logo"><img src="images/realtor-logo.png" alt="Realtor"></span>
+                                    <span class="equal-housing"><img src="images/equal-housing.svg" alt="Equal Housing Opportunity"></span>
+                                    <span class="realtor-logo"><img src="images/realtor-logo.svg" alt="Realtor"></span>
                                 </div>
                             </div>
                         </div>

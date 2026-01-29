@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#00205b"/>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WT2PRE8Q93"></script>
@@ -17,6 +18,7 @@
     <meta name="description" content="Search homes for sale in Tule Springs, North Las Vegas. Browse real-time MLS listings, get home valuations, and connect with Dr. Jan Duffy, your local real estate expert." />
     <meta name="keywords" content="Tule Springs homes for sale, North Las Vegas real estate, home search, sell my home, Dr. Jan Duffy, Berkshire Hathaway" />
     <link rel="canonical" href="https://www.homesintulesprings.com/" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.homesintulesprings.com/sitemap.xml" />
     
     <!-- Open Graph -->
     <meta property="og:title" content="Search Homes in Tule Springs | Dr. Jan Duffy, REALTOR®" />
@@ -59,6 +61,22 @@
         "memberOf": {
             "@type": "Organization",
             "name": "Berkshire Hathaway HomeServices Nevada Properties"
+        },
+        "openingHours": ["Mo-Fr 09:00-17:00", "Sa 10:00-15:00"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Homes in Tule Springs - Dr. Jan Duffy",
+        "url": "https://www.homesintulesprings.com",
+        "description": "Search homes for sale in Tule Springs, North Las Vegas. Dr. Jan Duffy, REALTOR® at Berkshire Hathaway HomeServices Nevada Properties.",
+        "publisher": {
+            "@type": "RealEstateAgent",
+            "name": "Dr. Jan Duffy",
+            "telephone": "+1-702-500-1942",
+            "url": "https://www.homesintulesprings.com"
         }
     }
     </script>
@@ -69,27 +87,41 @@
         <header class="header">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-3">
+                    <div class="col-md-3 header-left">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="images/logo.png" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
+                                <img src="images/logo.svg" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
                             </a>
+                        </div>
+                        <div class="header-phone">
+                            <a href="tel:+17025001942" class="phone-link"><i class="fas fa-phone"></i> (702) 500-1942</a>
                         </div>
                     </div>
                     <div class="col-md-9">
                         <nav class="navigation desktop-only">
                             <ul id="main-nav" class="menu">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="#buy">Buy</a></li>
-                                <li><a href="#sell">Sell</a></li>
-                                <li><a href="tule-springs.html">Tule Springs</a></li>
+                                <li><a href="buyers.html">Buy</a></li>
+                                <li><a href="listings">Listings</a></li>
+                                <li><a href="sellers.html">Sell</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="tule-springs.html">Tule Springs</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="tule-springs-homes-for-sale.html">Homes for Sale</a></li>
+                                        <li><a href="tule-springs-villages.html">Villages</a></li>
+                                        <li><a href="tule-springs-schools.html">Schools</a></li>
+                                        <li><a href="tule-springs-amenities.html">Amenities</a></li>
+                                        <li><a href="why-tule-springs.html">Why Live Here</a></li>
+                                        <li><a href="tule-springs-real-estate.html">Real Estate</a></li>
+                                        <li><a href="tule-springs-neighborhoods.html">Neighborhoods</a></li>
+                                        <li><a href="north-las-vegas-tule-springs.html">North Las Vegas</a></li>
+                                        <li><a href="tule-springs-new-homes.html">New Homes</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
-                        <div class="header-contact">
-                            <a href="tel:+17025001942" class="phone"><i class="fas fa-phone"></i> (702) 500-1942</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -135,7 +167,7 @@
                     <h2>Search Tule Springs Homes For Sale</h2>
                     <p>Browse real-time MLS listings updated every 15 minutes</p>
                 </div>
-                
+                <p class="mls-disclaimer text-muted small" style="margin-bottom: 1rem;"><strong>Listing disclaimer:</strong> All listing data is deemed reliable but not guaranteed. Listings displayed are from the MLS. &copy; 2026 the listing broker. All rights reserved.</p>
                 <!-- RealScout Buyer Widget - Main Property Search -->
                 <div class="realscout-widget-container realscout-main">
                     <realscout-office-listings 
@@ -345,7 +377,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="footer-logo">
-                            <img src="images/logo-white.png" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
+                            <img src="images/logo-white.svg" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid" loading="lazy">
                         </div>
                         <div class="footer-contact">
                             <p><i class="fas fa-map-marker-alt"></i> 2627 Nature Park Dr, North Las Vegas, NV 89084</p>
@@ -356,16 +388,28 @@
                     <div class="col-md-4">
                         <h3>Quick Links</h3>
                         <ul class="footer-links">
-                            <li><a href="#buy">Search Homes</a></li>
-                            <li><a href="#sell">Sell Your Home</a></li>
-                            <li><a href="#valuation">Home Valuation</a></li>
-                            <li><a href="tule-springs.html">Tule Springs Guide</a></li>
+                            <li><a href="buyers.html">Search Homes</a></li>
+                            <li><a href="listings">Listings</a></li>
+                            <li><a href="sellers.html">Sell Your Home</a></li>
+                            <li><a href="tule-springs.html">Tule Springs</a></li>
                             <li><a href="about.html">About Dr. Duffy</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4">
-                        <h3>Follow Dr. Duffy</h3>
+                        <h3>Explore Tule Springs</h3>
+                        <ul class="footer-links">
+                            <li><a href="tule-springs-homes-for-sale.html">Homes for Sale</a></li>
+                            <li><a href="tule-springs-real-estate.html">Real Estate</a></li>
+                            <li><a href="tule-springs-villages.html">Villages</a></li>
+                            <li><a href="tule-springs-schools.html">Schools</a></li>
+                            <li><a href="tule-springs-amenities.html">Amenities</a></li>
+                            <li><a href="tule-springs-neighborhoods.html">Neighborhoods</a></li>
+                            <li><a href="north-las-vegas-tule-springs.html">North Las Vegas</a></li>
+                            <li><a href="tule-springs-new-homes.html">New Homes</a></li>
+                            <li><a href="why-tule-springs.html">Why Live Here</a></li>
+                        </ul>
+                        <h3 class="mt-3">Follow Dr. Duffy</h3>
                         <div class="social-links">
                             <a href="https://www.facebook.com/DrJanDuffy" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/drjanduffy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -383,8 +427,8 @@
                             <div class="footer-legal">
                                 <p>Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada Properties</p>
                                 <div class="realtor-logos">
-                                    <span class="equal-housing"><img src="images/equal-housing.png" alt="Equal Housing Opportunity"></span>
-                                    <span class="realtor-logo"><img src="images/realtor-logo.png" alt="Realtor"></span>
+                                    <span class="equal-housing"><img src="images/equal-housing.svg" alt="Equal Housing Opportunity" loading="lazy"></span>
+                                    <span class="realtor-logo"><img src="images/realtor-logo.svg" alt="Realtor" loading="lazy"></span>
                                 </div>
                             </div>
                         </div>

@@ -1,29 +1,54 @@
 /* Main Stylesheet for Dr. Jan Duffy's Real Estate Website */
-/* Updated January 2026 - Modern Design Matching HeyBerkshire */
+/* Updated January 2026 - Optimized for performance and accessibility */
 
-/* 
- * Color Scheme:
- * Primary: #00205b (Berkshire Hathaway Navy Blue)
+/*
+ * Design tokens
+ * Primary: #00205b (Berkshire Hathaway Navy)
  * Secondary: #d3b054 (Gold accent)
- * Light: #f7f7f7 (Light gray)
- * Dark: #333333 (Dark text)
- * Accent 1: #7b9e89 (Desert sage)
- * Accent 2: #c8ad8d (Desert sand)
  */
-
-/* Global Styles */
 :root {
+    /* Colors */
     --primary: #00205b;
+    --primary-hover: #001640;
+    --primary-light: #003380;
     --secondary: #d3b054;
+    --secondary-hover: #c9a040;
     --light: #f7f7f7;
     --dark: #333333;
     --accent1: #7b9e89;
     --accent2: #c8ad8d;
     --success: #10b981;
     --white: #ffffff;
+    --text-muted: #666;
+    --border: #ddd;
+    /* Layout */
+    --container-max: 1200px;
+    --section-padding: 80px;
+    --section-padding-sm: 60px;
+    /* Spacing scale (4px base) */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    /* Radii & shadows */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-sm: 0 2px 10px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+    /* Transitions */
+    --ease: 0.3s ease;
 }
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -32,7 +57,7 @@ body {
     color: var(--dark);
     line-height: 1.6;
     font-size: 16px;
-    background-color: #fff;
+    background-color: var(--white);
     margin: 0;
     padding: 0;
 }
@@ -51,16 +76,20 @@ p {
 a {
     color: var(--primary);
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: color var(--ease);
 }
 
 a:hover {
     color: var(--secondary);
-    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--container-max);
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -70,12 +99,17 @@ a:hover {
 
 .btn {
     padding: 0.75rem 1.5rem;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: background-color var(--ease), border-color var(--ease), color var(--ease), transform var(--ease), box-shadow var(--ease);
     font-size: 0.9rem;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
 }
 
 .btn-lg {
@@ -90,8 +124,8 @@ a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #001640;
-    border-color: #001640;
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 32, 91, 0.3);
 }
@@ -108,13 +142,13 @@ a:hover {
 }
 
 .btn-outline-light {
-    border-color: #fff;
-    color: #fff;
+    border-color: var(--white);
+    color: var(--white);
     background: transparent;
 }
 
 .btn-outline-light:hover {
-    background-color: #fff;
+    background-color: var(--white);
     color: var(--primary);
 }
 
@@ -143,23 +177,80 @@ a:hover {
 
 .section-title p {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text-muted);
     max-width: 700px;
     margin: 0 auto;
 }
 
 /* Header Styles */
 .header {
-    padding: 15px 0;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 12px 0;
+    background-color: var(--white);
+    box-shadow: var(--shadow-md);
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 2px solid var(--primary);
+}
+
+.header .row {
+    min-height: 70px;
+}
+
+/* Logo section: logo + phone */
+.header-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
 }
 
 .logo img {
-    max-height: 70px;
+    max-height: 56px;
+    width: auto;
+    display: block;
+}
+
+.header-phone {
+    flex-shrink: 0;
+}
+
+.header-phone .phone-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.05rem;
+    white-space: nowrap;
+    padding: 8px 14px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(0,32,91,0.06) 0%, rgba(0,32,91,0.02) 100%);
+    border: 1px solid rgba(0,32,91,0.15);
+    transition: background var(--ease), color var(--ease), border-color var(--ease);
+}
+
+.header-phone .phone-link:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.header-phone .phone-link i {
+    font-size: 0.95rem;
+}
+
+/* Navigation: enhanced */
+.header .col-md-9 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navigation ul {
@@ -167,37 +258,52 @@ a:hover {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 4px;
 }
 
 .navigation ul li {
-    margin: 0 15px;
+    margin: 0;
     position: relative;
 }
 
-.navigation ul li a {
+.navigation ul li > a {
     color: var(--dark);
     font-weight: 600;
-    padding: 10px 0;
+    font-size: 0.95rem;
+    padding: 10px 14px;
     display: block;
+    border-radius: var(--radius-md);
+    transition: color var(--ease), background var(--ease);
 }
 
-.navigation ul li a:hover {
+.navigation ul li > a:hover {
     color: var(--primary);
+    background: rgba(0,32,91,0.06);
+}
+
+.navigation ul li.active > a {
+    color: var(--primary);
+    background: rgba(0,32,91,0.08);
+    font-weight: 700;
 }
 
 .navigation .sub-menu {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    width: 200px;
-    padding: 10px 0;
+    background-color: var(--white);
+    box-shadow: var(--shadow-lg);
+    width: 220px;
+    padding: 8px 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
+    transform: translateY(8px);
+    transition: opacity var(--ease), visibility var(--ease), transform var(--ease);
     z-index: 10;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
 }
 
 .navigation ul li:hover > .sub-menu {
@@ -212,22 +318,19 @@ a:hover {
 }
 
 .navigation .sub-menu li a {
-    padding: 8px 15px;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 0;
 }
 
+.navigation .sub-menu li a:hover {
+    background: rgba(0,32,91,0.06);
+}
+
+/* Legacy: header-contact kept for any pages still using it; visually hidden in logo area if present */
 .header-contact {
-    text-align: right;
-}
-
-.header-contact a {
-    display: inline-block;
-    margin-left: 20px;
-    color: var(--primary);
-    font-weight: 600;
-}
-
-.header-contact a i {
-    margin-right: 5px;
+    display: none;
 }
 
 /* Hero Banner */
@@ -266,8 +369,8 @@ a:hover {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--white);
     margin-bottom: 20px;
     line-height: 1.2;
 }
@@ -353,23 +456,24 @@ a:hover {
 .feature-box {
     text-align: center;
     padding: 30px 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
     margin-bottom: 30px;
-    transition: all 0.3s ease;
+    transition: transform var(--ease), box-shadow var(--ease);
     height: 100%;
+    contain: layout style;
 }
 
 .feature-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    box-shadow: var(--shadow-lg);
 }
 
 .feature-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, var(--primary) 0%, #003380 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -379,7 +483,7 @@ a:hover {
 
 .feature-icon i {
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--white);
 }
 
 .feature-box h3 {
@@ -389,7 +493,7 @@ a:hover {
 
 .feature-box p {
     font-size: 0.95rem;
-    color: #666;
+    color: var(--text-muted);
     margin-bottom: 0;
 }
 
@@ -480,8 +584,8 @@ a:hover {
 }
 
 .market-data .btn-primary:hover {
-    background: #c9a040;
-    border-color: #c9a040;
+    background: var(--secondary-hover);
+    border-color: var(--secondary-hover);
 }
 
 /* Featured Listings */
@@ -556,7 +660,7 @@ a:hover {
 }
 
 .listing-address {
-    color: #666;
+    color: var(--text-muted);
     margin-bottom: 15px;
     font-size: 0.95rem;
 }
@@ -892,14 +996,14 @@ a:hover {
 
 /* CTA Section */
 .cta-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, var(--primary) 0%, #003380 100%);
+    padding: var(--section-padding) 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     text-align: center;
 }
 
 .cta-content h2 {
-    color: #fff;
-    font-size: 2.5rem;
+    color: var(--white);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     margin-bottom: 15px;
 }
 
@@ -923,8 +1027,8 @@ a:hover {
 }
 
 .cta-buttons .btn-primary:hover {
-    background: #c9a040;
-    border-color: #c9a040;
+    background: var(--secondary-hover);
+    border-color: var(--secondary-hover);
 }
 
 .cta-buttons .btn-primary i {
@@ -1573,6 +1677,7 @@ a:hover {
     align-items: center;
     padding: 25px 35px;
     background: rgba(255,255,255,0.15);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.3);
     border-radius: 12px;
@@ -1629,7 +1734,7 @@ a:hover {
 
 .section-header p {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text-muted);
 }
 
 /* Buyer Section */
@@ -1638,14 +1743,7 @@ a:hover {
     background: #fff;
 }
 
-.buyer-section .container,
-.seller-section .container,
-.market-snapshot .container,
-.agent-brief .container,
-.cta-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* Section containers inherit .container max-width */
 
 /* Benefits Row */
 .benefits-row {
@@ -1684,7 +1782,7 @@ a:hover {
 
 .benefit-item p {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-muted);
     margin-bottom: 0;
 }
 
@@ -1949,8 +2047,8 @@ a:hover {
 }
 
 .banner-content h1 {
-    color: #fff;
-    font-size: 3rem;
+    color: var(--white);
+    font-size: clamp(1.75rem, 4vw, 3rem);
     margin-bottom: 10px;
 }
 
@@ -2261,6 +2359,71 @@ a:hover {
 
 /* Village Image */
 img.village-image {
-    border-radius: 8px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+/* --- Accessibility & polish --- */
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .pulse-animation {
+        animation: none;
+    }
+}
+
+/* Minimum tap target for touch (44px) */
+@media (pointer: coarse) {
+    .action-card {
+        min-height: 44px;
+        justify-content: center;
+    }
+    .fab-btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    .btn {
+        min-height: 44px;
+    }
+    .navigation .sub-menu li a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .floating-actions,
+    .hero-banner,
+    .realscout-widget-container,
+    .cta-section .cta-buttons,
+    .footer .social-links,
+    nav {
+        display: none !important;
+    }
+    body {
+        font-size: 12pt;
+        color: #000;
+    }
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.85em;
+        color: #666;
+    }
+    .container {
+        max-width: 100%;
+    }
+    .footer {
+        padding-top: 20px;
+        border-top: 1px solid #ccc;
+    }
 }

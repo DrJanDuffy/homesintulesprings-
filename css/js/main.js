@@ -82,11 +82,24 @@ $(document).ready(function() {
         }
     });
     
+    // FAQ accordion (contact page)
+    $('.faq-question').on('click', function() {
+        var item = $(this).closest('.faq-item');
+        item.toggleClass('active').siblings('.faq-item').removeClass('active');
+    });
+
     // Form submission handler
     $('#home-contact-form').submit(function(e) {
         e.preventDefault();
         // Replace with actual form submission logic
         alert('Your message has been sent. Dr. Duffy will contact you shortly!');
+        this.reset();
+    });
+
+    // Contact form submission
+    $('#contact-form').submit(function(e) {
+        e.preventDefault();
+        alert('Thank you! Dr. Jan Duffy will contact you shortly.');
         this.reset();
     });
     

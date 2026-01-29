@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
     
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"LocalBusiness","name":"Dr. Jan Duffy - Berkshire Hathaway HomeServices","image":"https://www.homesintulesprings.com/images/logo.svg","telephone":"+1-702-500-1942","email":"DrDuffy@bhhsnv.com","address":{"@type":"PostalAddress","streetAddress":"2627 Nature Park Dr","addressLocality":"North Las Vegas","addressRegion":"NV","postalCode":"89084","addressCountry":"US"},"openingHours":["Mo-Fr 09:00-17:00","Sa 10:00-15:00"],"url":"https://www.homesintulesprings.com/buyers.html"}
+    </script>
     <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" defer></script>
 </head>
 <body>
@@ -35,11 +38,14 @@
         <header class="header">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-3">
+                    <div class="col-md-3 header-left">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="images/logo.png" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
+                                <img src="images/logo.svg" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" class="img-fluid">
                             </a>
+                        </div>
+                        <div class="header-phone">
+                            <a href="tel:+17025001942" class="phone-link"><i class="fas fa-phone"></i> (702) 500-1942</a>
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -47,15 +53,26 @@
                             <ul id="main-nav" class="menu">
                                 <li><a href="index.html">Home</a></li>
                                 <li class="active"><a href="buyers.html">Buy</a></li>
+                                <li><a href="listings">Listings</a></li>
                                 <li><a href="sellers.html">Sell</a></li>
-                                <li><a href="tule-springs.html">Tule Springs</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="tule-springs.html">Tule Springs</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="tule-springs-homes-for-sale.html">Homes for Sale</a></li>
+                                        <li><a href="tule-springs-villages.html">Villages</a></li>
+                                        <li><a href="tule-springs-schools.html">Schools</a></li>
+                                        <li><a href="tule-springs-amenities.html">Amenities</a></li>
+                                        <li><a href="why-tule-springs.html">Why Live Here</a></li>
+                                        <li><a href="tule-springs-real-estate.html">Real Estate</a></li>
+                                        <li><a href="tule-springs-neighborhoods.html">Neighborhoods</a></li>
+                                        <li><a href="north-las-vegas-tule-springs.html">North Las Vegas</a></li>
+                                        <li><a href="tule-springs-new-homes.html">New Homes</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
-                        <div class="header-contact">
-                            <a href="tel:+17025001942" class="phone"><i class="fas fa-phone"></i> (702) 500-1942</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -79,6 +96,7 @@
                     <h2>Search Available Homes</h2>
                     <p>Browse real-time MLS listings in Tule Springs and surrounding areas</p>
                 </div>
+                <p class="mls-disclaimer text-muted small" style="margin-bottom: 1rem;"><strong>Listing disclaimer:</strong> All listing data is deemed reliable but not guaranteed. Listings displayed are from the MLS. &copy; 2026 the listing broker. All rights reserved.</p>
                 <div class="realscout-widget-container realscout-main">
                     <realscout-office-listings 
                         agent-encoded-id="QWdlbnQtMjI1MDUw"
@@ -115,7 +133,7 @@
                                 <i class="fas fa-map-marked-alt"></i>
                             </div>
                             <h3>Local Market Expert</h3>
-                            <p>17+ years of Tule Springs expertise. Know the best neighborhoods, schools, and hidden gems.</p>
+                            <p>17+ years of <a href="tule-springs.html">Tule Springs</a> expertise. Know the best <a href="tule-springs-villages.html">neighborhoods</a>, <a href="tule-springs-schools.html">schools</a>, and hidden gems.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -198,9 +216,10 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="footer-logo">
-                            <img src="images/logo-white.png" alt="Dr. Jan Duffy - BHHS" class="img-fluid">
+                            <img src="images/logo-white.svg" alt="Dr. Jan Duffy - BHHS" class="img-fluid">
                         </div>
                         <div class="footer-contact">
+                            <p><i class="fas fa-map-marker-alt"></i> 2627 Nature Park Dr, North Las Vegas, NV 89084</p>
                             <p><i class="fas fa-phone"></i> <a href="tel:+17025001942">(702) 500-1942</a></p>
                             <p><i class="fas fa-envelope"></i> <a href="mailto:DrDuffy@bhhsnv.com">DrDuffy@bhhsnv.com</a></p>
                         </div>
@@ -209,18 +228,32 @@
                         <h3>Quick Links</h3>
                         <ul class="footer-links">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="buyers.html">Buy a Home</a></li>
-                            <li><a href="sellers.html">Sell Your Home</a></li>
+                            <li><a href="buyers.html">Buy</a></li>
+                            <li><a href="listings">Listings</a></li>
+                            <li><a href="sellers.html">Sell</a></li>
                             <li><a href="tule-springs.html">Tule Springs</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4">
-                        <h3>Follow Dr. Duffy</h3>
+                        <h3>Explore Tule Springs</h3>
+                        <ul class="footer-links">
+                            <li><a href="tule-springs-homes-for-sale.html">Homes for Sale</a></li>
+                            <li><a href="tule-springs-real-estate.html">Real Estate</a></li>
+                            <li><a href="tule-springs-villages.html">Villages</a></li>
+                            <li><a href="tule-springs-schools.html">Schools</a></li>
+                            <li><a href="tule-springs-amenities.html">Amenities</a></li>
+                            <li><a href="tule-springs-neighborhoods.html">Neighborhoods</a></li>
+                            <li><a href="north-las-vegas-tule-springs.html">North Las Vegas</a></li>
+                            <li><a href="tule-springs-new-homes.html">New Homes</a></li>
+                            <li><a href="why-tule-springs.html">Why Live Here</a></li>
+                        </ul>
+                        <h3 class="mt-3">Follow Dr. Duffy</h3>
                         <div class="social-links">
                             <a href="https://www.facebook.com/DrJanDuffy" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/drjanduffy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                             <a href="https://www.linkedin.com/in/drjanduffy" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.youtube.com/@drjanduffy" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
