@@ -10,9 +10,9 @@ export function Footer() {
               <img src="/images/logo-white.svg" alt="Dr. Jan Duffy - Berkshire Hathaway HomeServices" className="img-fluid" loading="lazy" />
             </div>
             <div className="footer-contact">
-              <p><i className="fas fa-map-marker-alt"></i> 2627 Nature Park Dr, North Las Vegas, NV 89084</p>
-              <p><i className="fas fa-phone"></i> <a href="tel:+17025001942">(702) 500-1942</a></p>
-              <p><i className="fas fa-envelope"></i> <a href="mailto:DrDuffy@bhhsnv.com">DrDuffy@bhhsnv.com</a></p>
+              <p><i className="fas fa-map-marker-alt" aria-hidden="true"></i> 2627 Nature Park Dr, North Las Vegas, NV 89084</p>
+              <p><i className="fas fa-phone" aria-hidden="true"></i> <a href="tel:+17025001942">(702) 500-1942</a></p>
+              <p><i className="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:DrDuffy@bhhsnv.com">DrDuffy@bhhsnv.com</a></p>
             </div>
           </div>
           <div className="col-md-4">
@@ -41,10 +41,10 @@ export function Footer() {
             </ul>
             <h3 className="mt-3">Follow Dr. Duffy</h3>
             <div className="social-links">
-              <a href="https://www.facebook.com/DrJanDuffy" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-              <a href="https://www.instagram.com/drjanduffy" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/drjanduffy" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-              <a href="https://www.youtube.com/@drjanduffy" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
+              <a href="https://www.facebook.com/DrJanDuffy" aria-label="Facebook"><i className="fab fa-facebook-f" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/drjanduffy" aria-label="Instagram"><i className="fab fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/drjanduffy" aria-label="LinkedIn"><i className="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com/@drjanduffy" aria-label="YouTube"><i className="fab fa-youtube" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>

@@ -1,11 +1,18 @@
 import type { NextConfig } from 'next';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: false,
+  // Use project directory so Next uses this repo's node_modules (fixes multiple lockfile warning)
+  outputFileTracingRoot: __dirname,
   images: {
     unoptimized: true,
   },
+  // Redirects/headers don't apply with output: 'export' — configure in Vercel dashboard or vercel.json
   async redirects() {
     return [
       { source: '/index', destination: '/', permanent: true },

@@ -12,11 +12,11 @@ export function Header() {
               </Link>
             </div>
             <div className="header-phone">
-              <a href="tel:+17025001942" className="phone-link"><i className="fas fa-phone"></i> (702) 500-1942</a>
+              <a href="tel:+17025001942" className="phone-link" aria-label="Call (702) 500-1942"><i className="fas fa-phone" aria-hidden="true"></i> (702) 500-1942</a>
             </div>
           </div>
           <div className="col-md-9">
-            <nav className="navigation desktop-only">
+            <nav className="navigation desktop-only" aria-label="Main navigation">
               <ul id="main-nav" className="menu">
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/buyers">Buy</Link></li>

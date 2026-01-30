@@ -56,7 +56,7 @@ export default function ContactPage() {
                       <div><strong>Office</strong><br />2627 Nature Park Dr<br />North Las Vegas, NV 89084</div>
                     </li>
                   </ul>
-                  <div className="contact-action-buttons" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', margin: '24px 0' }}>
+                  <div className="contact-action-buttons">
                     <a href="tel:+17025001942" className="btn btn-primary"><i className="fas fa-phone"></i> Call</a>
                     <a href="https://www.google.com/maps/dir//2627+Nature+Park+Dr,+North+Las+Vegas,+NV+89084" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary"><i className="fas fa-directions"></i> Directions</a>
                     <a href="https://www.google.com/search?q=Dr+Jan+Duffy+Berkshire+Hathaway+North+Las+Vegas+reviews" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary"><i className="fas fa-star"></i> View Google Reviews</a>
@@ -77,9 +77,9 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="col-lg-7">
-                <div className="contact-form" style={{ background: '#fff', padding: '30px', borderRadius: '8px' }}>
+                <div className="contact-form">
                   <h3>Send a Message</h3>
-                  <form id="contact-form" action="#" method="post">
+                  <form id="contact-form" action="#" method="post" aria-label="Contact Dr. Jan Duffy">
                     <div className="row">
                       <div className="col-md-6">
                         <div className="form-group">
@@ -96,7 +96,7 @@ export default function ContactPage() {
                       <input type="email" className="form-control" name="email" placeholder="Email Address *" required />
                     </div>
                     <div className="form-group">
-                      <select className="form-control" name="interest" required>
+                      <select className="form-control" name="interest" id="interest" required aria-label="I'm interested in">
                         <option value="">I&apos;m interested in... *</option>
                         <option value="buying">Buying a Home</option>
                         <option value="selling">Selling My Home</option>

@@ -1167,6 +1167,28 @@ body .container,
     color: #666;
 }
 
+.contact-section .contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: var(--radius-md);
+}
+
+.contact-action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.contact-info .social-links {
+    margin-top: 30px;
+}
+
+.mls-disclaimer {
+    font-size: 0.95rem !important;
+    margin-bottom: 1rem;
+}
+
 /* Footer */
 .footer {
     background-color: var(--primary);
@@ -1800,9 +1822,6 @@ body .container,
     background: #fff;
 }
 
-.mls-disclaimer {
-    font-size: 0.95rem !important;
-}
 
 /* Section containers inherit .container max-width */
 
