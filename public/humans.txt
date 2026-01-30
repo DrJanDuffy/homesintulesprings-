@@ -1,0 +1,28 @@
+/* TEAM */
+	Realtor: Dr. Jan Duffy
+	Contact: DrDuffy@bhhsnv.com
+	Location: North Las Vegas, Nevada, USA
+	
+	Web Developer: [Your Name]
+	Contact: [Your Email]
+	Location: [Your Location]
+	
+	Designer: [Designer Name]
+	Contact: [Designer Email]
+	Location: [Designer Location]
+
+/* THANKS */
+	Berkshire Hathaway HomeService Nevada Properties
+	Tule Springs Community Development
+	
+/* SITE */
+	Last update: 2025-03-06
+	Language: English
+	Doctype: HTML5
+	IDE: Visual Studio Code, Adobe Photoshop, Figma
+	
+/* TECHNOLOGY */
+	HTML5, CSS3, JavaScript
+	jQuery, Bootstrap 5
+	Google Maps API
+	Structured Data / Schema.org

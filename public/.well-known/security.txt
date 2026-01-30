@@ -1,0 +1,4 @@
+Contact: mailto:DrDuffy@bhhsnv.com
+Expires: 2027-01-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://www.homesintulesprings.com/.well-known/security.txt

@@ -1,0 +1,42 @@
+# robots.txt for HomesInTuleSprings.com
+# Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.homesintulesprings.com/sitemap.xml
+
+# Prevent indexing of administrative or system content
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /temp/
+Disallow: /cgi-bin/
+Disallow: /.git/
+Disallow: /.github/
+
+# Allow all major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+# Allow AI crawlers for enhanced search features
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Crawl delay for courtesy (optional)
+# Crawl-delay: 1

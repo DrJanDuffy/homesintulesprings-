@@ -1,0 +1,231 @@
+import Link from 'next/link';
+
+export default function HomePage() {
+  return (
+    <>
+      <section className="hero-banner">
+        <div className="hero-slide" style={{ backgroundImage: "url('/images/tule-springs-park.jpg')" }}>
+          <div className="container">
+            <div className="hero-content text-center">
+              <h1>Tule Springs Real Estate</h1>
+              <p className="hero-subtitle">Search homes, get valuations, and connect with Dr. Jan Duffy</p>
+              <div className="hero-actions">
+                <a href="#buy" className="action-card">
+                  <i className="fas fa-search"></i>
+                  <span>Search Homes</span>
+                </a>
+                <a href="#sell" className="action-card">
+                  <i className="fas fa-home"></i>
+                  <span>Sell My Home</span>
+                </a>
+                <a href="#valuation" className="action-card">
+                  <i className="fas fa-calculator"></i>
+                  <span>Home Value</span>
+                </a>
+                <a href="tel:+17025001942" className="action-card">
+                  <i className="fas fa-phone"></i>
+                  <span>Call Now</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="buy" className="buyer-section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge">For Buyers</span>
+            <h2>Search Tule Springs Homes For Sale</h2>
+            <p>Browse real-time MLS listings updated every 15 minutes</p>
+          </div>
+          <p className="mls-disclaimer text-muted small" style={{ marginBottom: '1rem' }}><strong>Listing disclaimer:</strong> All listing data is deemed reliable but not guaranteed. Listings displayed are from the MLS. &copy; 2026 the listing broker. All rights reserved.</p>
+          <div className="realscout-widget-container realscout-main">
+            {/* @ts-expect-error RealScout custom element */}
+            <realscout-office-listings
+              agent-encoded-id="QWdlbnQtMjI1MDUw"
+              sort-order="NEWEST"
+              listing-status="For Sale"
+              property-types="SFR,MF,TC,OTHER"
+              price-min="300000"
+              price-max="900000"
+            />
+          </div>
+          <div className="benefits-row">
+            <div className="benefit-item">
+              <i className="fas fa-bolt"></i>
+              <h4>Real-Time Listings</h4>
+              <p>See new homes the moment they hit the market</p>
+            </div>
+            <div className="benefit-item">
+              <i className="fas fa-heart"></i>
+              <h4>Save Favorites</h4>
+              <p>Create an account to save and compare homes</p>
+            </div>
+            <div className="benefit-item">
+              <i className="fas fa-bell"></i>
+              <h4>Instant Alerts</h4>
+              <p>Get notified when new listings match your criteria</p>
+            </div>
+            <div className="benefit-item">
+              <i className="fas fa-calendar"></i>
+              <h4>Schedule Tours</h4>
+              <p>Book showings directly through the platform</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sell" className="seller-section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge seller-badge">For Sellers</span>
+            <h2>Thinking of Selling Your Home?</h2>
+            <p>Get your home&apos;s value and see what&apos;s selling in your neighborhood</p>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <div id="valuation" className="valuation-card">
+                <div className="valuation-header">
+                  <i className="fas fa-chart-line"></i>
+                  <h3>What&apos;s Your Home Worth?</h3>
+                </div>
+                <p>Get a free, no-obligation market analysis of your Tule Springs home based on recent comparable sales.</p>
+                <ul className="valuation-features">
+                  <li><i className="fas fa-check"></i> Accurate market data</li>
+                  <li><i className="fas fa-check"></i> Recent comparable sales</li>
+                  <li><i className="fas fa-check"></i> Neighborhood trends</li>
+                  <li><i className="fas fa-check"></i> No obligation</li>
+                </ul>
+                <div className="realscout-widget-container">
+                  {/* @ts-expect-error RealScout custom element */}
+                  <realscout-home-value agent-encoded-id="QWdlbnQtMjI1MDUw" />
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="sold-card">
+                <div className="sold-header">
+                  <i className="fas fa-tag"></i>
+                  <h3>Recently Sold in Tule Springs</h3>
+                </div>
+                <p>See what homes are selling for in your area</p>
+                <div className="realscout-widget-container">
+                  {/* @ts-expect-error RealScout custom element */}
+                  <realscout-office-listings
+                    agent-encoded-id="QWdlbnQtMjI1MDUw"
+                    sort-order="NEWEST"
+                    listing-status="Sold"
+                    property-types="SFR,MF,TC,OTHER"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="benefits-row seller-benefits">
+            <div className="benefit-item">
+              <i className="fas fa-dollar-sign"></i>
+              <h4>Top Dollar</h4>
+              <p>Strategic pricing to maximize your sale price</p>
+            </div>
+            <div className="benefit-item">
+              <i className="fas fa-camera"></i>
+              <h4>Pro Marketing</h4>
+              <p>Professional photos, 3D tours, and targeted ads</p>
+            </div>
+            <div className="benefit-item">
+              <i className="fas fa-clock"></i>
+              <h4>Fast Results</h4>
+              <p>Average 24 days on market in Tule Springs</p>
+            </div>
+            <div className="benefit-item">
+              <i className="fas fa-handshake"></i>
+              <h4>Expert Negotiation</h4>
+              <p>500+ transactions closed since 2008</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="market-snapshot">
+        <div className="container">
+          <div className="section-header">
+            <h2>Tule Springs Market Snapshot</h2>
+            <p>January 2026 | Updated Monthly</p>
+          </div>
+          <div className="stats-grid">
+            <div className="stat-card">
+              <span className="stat-value">$485K</span>
+              <span className="stat-label">Median Price</span>
+              <span className="stat-trend positive"><i className="fas fa-arrow-up"></i> 5.1%</span>
+            </div>
+            <div className="stat-card">
+              <span className="stat-value">24</span>
+              <span className="stat-label">Days on Market</span>
+            </div>
+            <div className="stat-card">
+              <span className="stat-value">98%</span>
+              <span className="stat-label">Sale-to-List Ratio</span>
+            </div>
+            <div className="stat-card">
+              <span className="stat-value">156</span>
+              <span className="stat-label">Active Listings</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="agent-brief">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-4 text-center">
+              <img src="/images/dr-jan-duffy.jpg" alt="Dr. Jan Duffy, REALTOR®" className="agent-photo" />
+            </div>
+            <div className="col-md-8">
+              <h2>Dr. Jan Duffy</h2>
+              <p className="agent-title">Your Tule Springs Real Estate Expert</p>
+              <p>Serving Tule Springs and North Las Vegas since 2008. Whether you&apos;re buying your first home or selling to move up, I provide personalized service backed by Berkshire Hathaway HomeServices.</p>
+              <div className="agent-stats">
+                <div className="agent-stat">
+                  <strong>500+</strong>
+                  <span>Homes Sold</span>
+                </div>
+                <div className="agent-stat">
+                  <strong>17+</strong>
+                  <span>Years Experience</span>
+                </div>
+                <div className="agent-stat">
+                  <strong>4.9★</strong>
+                  <span>Client Rating</span>
+                </div>
+              </div>
+              <div className="agent-actions">
+                <a href="tel:+17025001942" className="btn btn-primary"><i className="fas fa-phone"></i> (702) 500-1942</a>
+                <a href="mailto:DrDuffy@bhhsnv.com" className="btn btn-outline-primary"><i className="fas fa-envelope"></i> Email Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-content text-center">
+            <h2>Ready to Make Your Move?</h2>
+            <p>Whether buying or selling, I&apos;m here to help you every step of the way.</p>
+            <div className="cta-buttons">
+              <a href="tel:+17025001942" className="btn btn-primary btn-lg"><i className="fas fa-phone"></i> Call (702) 500-1942</a>
+              <Link href="/contact" className="btn btn-outline-light btn-lg"><i className="fas fa-envelope"></i> Send Message</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="floating-actions">
+        <a href="tel:+17025001942" className="fab-btn fab-phone pulse-animation" aria-label="Call Dr. Duffy">
+          <i className="fas fa-phone"></i>
+        </a>
+      </div>
+    </>
+  );
+}

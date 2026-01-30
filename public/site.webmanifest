@@ -1,0 +1,27 @@
+{
+  "name": "Homes in Tule Springs - Dr. Jan Duffy",
+  "short_name": "Tule Springs",
+  "description": "Find your dream home in Tule Springs, North Las Vegas with Dr. Jan Duffy, REALTOR® at Berkshire Hathaway HomeServices Nevada Properties.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00205b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["real estate", "business"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
